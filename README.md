@@ -30,9 +30,11 @@ cd genbank_downloads/
 
 ## Locate Data on NCBI
 
+Whatever method you use be sure to grab an outgroup, or don't thats your call.
+
 ### Method 1: Download genomes based on 16S BLAST results
 
-We ran a NCBI blast during the genome assembly tutorial. This BLAST should have given you the closest match against the nt database. Chances are it 'hit' well to many genomes. Choose the top
+We ran a NCBI blast during the genome assembly tutorial. This BLAST should have given you the closest match against the nt database. Chances are it 'hit' well to many genomes. Choose the top hit to a full genome and follow the links to retriev the download link of the genome FAA from the ftp site.
 
 
 ### Method 2: Download all refseq genomes for your genus
@@ -62,4 +64,34 @@ wget "ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/091/305/GCA_000091305.1_ASM
 gunzip *.gz
 ```
 
-### Method 3: 
+
+## Set up orthofinder directory
+
+```bash
+# move to analysis folder
+cd ../orthofinder-analysis
+# create a soft link to the FAA files we just downloaded
+ln -s ../genbank_downloads/*.faa ./
+# create a soft link to the FAA fles from our PROKKA analysis
+ln -s /home/maineBK/shared_data/filtered_genome_assemblies/prokka_faas/*.faa ./
+```
+
+## Count the number of proteins in all the starting files
+Think about what these numbers tell us right off the bat.
+
+```bash
+grep -c '>' *.faa
+```
+
+## Run Orthofinder2
+
+The input to the program is a directory containing a FAA file for each species.
+
+```bash
+# view the manual
+orthofinder2 --help
+# run the program
+nohup time orthofinder2 -t 16 -a 16 -S diamond -f ./ &
+```
+
+## Examine the output files
