@@ -26,7 +26,8 @@ The program takes a set of protein sequences for each species and runs pair-wise
 
 ## Set up working directories
 ```bash
-cd ~/mdibl-t3-WGS/
+mkdir ~/mdibl-t3-WGS-comparative/
+cd ~/mdibl-t3-WGS-comparative/
 mkdir orthofinder-analysis
 cd orthofinder-analysis/
 mkdir genbank_downloads
