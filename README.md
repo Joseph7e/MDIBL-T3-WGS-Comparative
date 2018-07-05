@@ -1,4 +1,4 @@
-# MDIBL-T3_WGS-Comparative
+# MDIBL-T3-WGS-Comparative
 
 ## Our Starting data
 
@@ -34,6 +34,8 @@ cd genbank_downloads/
 ```
 
 ## Locate Reference Data on NCBI
+
+FAQs about genome download from NCBI: https://www.ncbi.nlm.nih.gov/genome/doc/ftpfaq/#GBorRS
 
 Whatever method you use be sure to grab an outgroup, or don't thats your call.
 
