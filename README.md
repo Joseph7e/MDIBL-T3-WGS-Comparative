@@ -154,19 +154,19 @@ In my opinion this is the most important statistics output file. It provides det
 tabview Statistics_PerSpecies.csv
 ```
 
-## Working Directory
+### WorkingDirectory/
 
 All of the work that external programs like BLAST or DIAMOND. 'ls' this directory. It contains all the results for each pairwise comparison.
 
-## Orthologues_DATE
+### Orthologues_DATE/
 
 This directory contains a lot of useful data related to the Orthofinder analysis and how they commpute the phylogenetic trees.
 
-### Recon_Gene_Trees/
+#### Recon_Gene_Trees/
 
 A directory containing inferred trees for every orthogroup.
 
-### SpeciesTree_rooted.txt
+#### SpeciesTree_rooted.txt
 
 A rooted-species tree. Orthofinder commputes a root for the tree automatically. You can view this in any tree viewing program like FigTree or TreeView (macs). This file is in newick format. Check it out.
 
