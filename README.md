@@ -128,7 +128,7 @@ The same style table. Instead this one contains Orthogroups that are not belongi
 tabview Orthogroups_UnassignedGenes.csv
 ```
 
-###  *Orthogroups.GeneCount.csv
+###  * Orthogroups.GeneCount.csv
 
 My favorite 'Orthogroup' Output file. Orthogroups are the rows, columns are gene counts per species. This can be easily parsed to see what orthogroups are specific to waht species. It provides total gene counts for each sample.
 
@@ -138,7 +138,7 @@ tabview Orthogroups.GeneCount.csv
 
 ## Statistics
 
-### Statistics_Overall.csv
+### * Statistics_Overall.csv
 
 A file containing the overall statistcis for the analysis. Total number of genes in the dataset etc. 
 
@@ -146,7 +146,7 @@ A file containing the overall statistcis for the analysis. Total number of genes
 tabview Statistics_Overall.csv
 ```
 
-### Statistics_PerSpecies.csv
+### * Statistics_PerSpecies.csv
 
 In my opinion this is the most important statistics output file. It provides details for each sample. How many genes were speciifc to that sample. If you want to know a quick statistics of how 'differen't your genome is, this is it.
 
@@ -154,19 +154,19 @@ In my opinion this is the most important statistics output file. It provides det
 tabview Statistics_PerSpecies.csv
 ```
 
-### WorkingDirectory/
+### * WorkingDirectory/
 
 All of the work that external programs like BLAST or DIAMOND. 'ls' this directory. It contains all the results for each pairwise comparison.
 
-### Orthologues_DATE/
+### * Orthologues_DATE/
 
 This directory contains a lot of useful data related to the Orthofinder analysis and how they commpute the phylogenetic trees.
 
-#### Recon_Gene_Trees/
+#### * Recon_Gene_Trees/
 
 A directory containing inferred trees for every orthogroup.
 
-#### SpeciesTree_rooted.txt
+#### * SpeciesTree_rooted.txt
 
 A rooted-species tree. Orthofinder commputes a root for the tree automatically. You can view this in any tree viewing program like FigTree or TreeView (macs). This file is in newick format. Check it out.
 
