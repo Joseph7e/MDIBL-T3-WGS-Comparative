@@ -136,6 +136,15 @@ My favorite 'Orthogroup' Output file. Orthogroups are the rows, columns are gene
 tabview Orthogroups.GeneCount.csv
 ```
 
+* add annotations from a reference sequence
+
+~/orthogroups_add_annotations.py <reference_faa> Orthogroups.txt  Orthogroups.GeneCount.csv
+
+```bash
+orthogroups_add_annotations.py ../GCF_000203835.1_ASM20383v1_protein.faa Orthogroups.txt  Orthogroups.GeneCount.csv | tabview -
+```
+
+
 ## Statistics
 
 ### * Statistics_Overall.csv
