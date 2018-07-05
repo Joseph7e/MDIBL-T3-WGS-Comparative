@@ -17,7 +17,7 @@ Streptomyces   | 13             | 1,185    | 338
 
 ## What we will be doing
 
-We will be using **Orthofinder** for our main comparative genomic analysis. The manual is great and documents how it works very well. To run the program we will need some genomes to compare, specifically we will need proteins files.
+We will be using **Orthofinder** for our main comparative genomic analysis. The manual is very detailed so take some time to readit. To run the program we will need some genomes to compare.
 
 Orhtofinder Manual: https://github.com/davidemms/OrthoFinder
 
