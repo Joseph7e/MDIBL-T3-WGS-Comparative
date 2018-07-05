@@ -12,7 +12,7 @@ Kocuria        | 1              | 57   | 13
 Streptomyces   | 13             | 1,185    | 338
 
 
-We will mainly being using **Orthofinder** for our main comparative genomic analysis. The manual documents how it works very well.
+We will be using **Orthofinder** for our main comparative genomic analysis. The manual is great and documents how it works very well.
 
 Orhtofinder Manual: https://github.com/davidemms/OrthoFinder
 
