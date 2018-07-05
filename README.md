@@ -1,6 +1,10 @@
 # MDIBL-T3_WGS-Comparative
 
-# Download Some Representative Genomes for Your Organism
+## Our Starting data
+
+```bash
+ls /home/maineBK/shared_data/filtered_genome_assemblies/
+```
 
 
 Organism       |  Our Data      | NCBI-Assemblies | NCBI-Genomes
@@ -11,8 +15,9 @@ Rothia         | 1              | 76    | 5
 Kocuria        | 1              | 57   | 13
 Streptomyces   | 13             | 1,185    | 338
 
+## What we will be doing
 
-We will be using **Orthofinder** for our main comparative genomic analysis. The manual is great and documents how it works very well.
+We will be using **Orthofinder** for our main comparative genomic analysis. The manual is great and documents how it works very well. To run the program we will need some genomes to compare, specifically we will need proteins files.
 
 Orhtofinder Manual: https://github.com/davidemms/OrthoFinder
 
