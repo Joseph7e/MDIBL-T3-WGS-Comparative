@@ -97,8 +97,81 @@ The input to the program is a directory containing a FAA file for each species.
 ```bash
 # view the manual
 orthofinder2 --help
-# run the program
+# run the program, it will take some time
 nohup time orthofinder2 -t 16 -a 16 -S diamond -f ./ &
 ```
 
 ## Examine the output files
+
+I will review some, but not all of the files. The manual goes into extensive detail.
+
+```bash
+cd Results*/
+ls
+```
+
+### Orthogroups.csv
+
+A **tab** seperated table. Each orthogroup is a raw, each column is a different sample.
+
+The table provides all of the data for orthogroups that are in at least two different samples. If a sample has more than one protein for that particular orthogroup than it will have a comma seperated list for the entry. 
+
+```bash
+tabview Orthogroups.csv
+```
+
+### Orthogroups_UnassignedGenes.csv
+
+The same style table. Instead this one contains Orthogroups that are not belonging to an orthogroup, they are unique to a single sample. As you scroll down you should notice the proteins belong to different samples.
+
+```bash
+tabview Orthogroups_UnassignedGenes.csv
+```
+
+### Orthogroups.GeneCount.csv
+
+My favorite 'Orthogroup' Output file. Orthogroups are the rows, columns are gene counts per species. This can be easily parsed to see what orthogroups are specific to waht species. It provides total gene counts for each sample.
+
+```bash
+tabview Orthogroups.GeneCount.csv
+```
+
+## Statistics
+
+### Statistics_Overall.csv
+
+A file containing the overall statistcis for the analysis. Total number of genes in the dataset etc. 
+
+```bash
+tabview Statistics_Overall.csv
+```
+
+### Statistics_PerSpecies.csv
+
+In my opinion this is the most important statistics output file. It provides details for each sample. How many genes were speciifc to that sample. If you want to know a quick statistics of how 'differen't your genome is, this is it.
+
+```bash
+tabview Statistics_PerSpecies.csv
+```
+
+## Working Directory
+
+All of the work that external programs like BLAST or DIAMOND. 'ls' this directory. It contains all the results for each pairwise comparison.
+
+## Orthologues_DATE
+
+This directory contains a lot of useful data related to the Orthofinder analysis and how they commpute the phylogenetic trees.
+
+### Recon_Gene_Trees/
+
+A directory containing inferred trees for every orthogroup.
+
+### SpeciesTree_rooted.txt
+
+A rooted-species tree. Orthofinder commputes a root for the tree automatically. You can view this in any tree viewing program like FigTree or TreeView (macs). This file is in newick format. Check it out.
+
+```bash
+more Orthologues*/SpeciesTree_rooted.txt
+```
+
+## Export the tree file and view.
