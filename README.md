@@ -33,7 +33,7 @@ mkdir genbank_downloads
 cd genbank_downloads/
 ```
 
-## Locate Data on NCBI
+## Locate Reference Data on NCBI
 
 Whatever method you use be sure to grab an outgroup, or don't thats your call.
 
