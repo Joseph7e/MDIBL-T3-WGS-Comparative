@@ -110,7 +110,7 @@ cd Results*/
 ls
 ```
 
-### Orthogroups.csv
+### * Orthogroups.csv
 
 A **tab** seperated table. Each orthogroup is a raw, each column is a different sample.
 
@@ -120,7 +120,7 @@ The table provides all of the data for orthogroups that are in at least two diff
 tabview Orthogroups.csv
 ```
 
-### Orthogroups_UnassignedGenes.csv
+### * Orthogroups_UnassignedGenes.csv
 
 The same style table. Instead this one contains Orthogroups that are not belonging to an orthogroup, they are unique to a single sample. As you scroll down you should notice the proteins belong to different samples.
 
@@ -128,7 +128,7 @@ The same style table. Instead this one contains Orthogroups that are not belongi
 tabview Orthogroups_UnassignedGenes.csv
 ```
 
-### Orthogroups.GeneCount.csv
+###  *Orthogroups.GeneCount.csv
 
 My favorite 'Orthogroup' Output file. Orthogroups are the rows, columns are gene counts per species. This can be easily parsed to see what orthogroups are specific to waht species. It provides total gene counts for each sample.
 
