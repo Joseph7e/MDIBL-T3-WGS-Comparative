@@ -185,3 +185,18 @@ more Orthologues*/SpeciesTree_rooted.txt
 ```
 
 ## Export the tree file and view.
+
+
+## Bonus - Figures
+```
+orthogroups_add_annotations.py ../GCF_000203835.1_ASM20383v1_protein.faa Orthogroups.txt  Orthogroups.GeneCount.csv
+
+orthotools-venn.py Results_*/ PROKKA_*.faa species1.faa species2.faa  venn
+
+orthotools-UpSet.R Results_*/Orthogroups.GeneCount.csv
+
+```
+
+
+
+
