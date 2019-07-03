@@ -59,6 +59,10 @@ We will download the file directly to the server, there is no need to download i
 wget "ftp://ftp.ncbi.nlm.nih.gov/genomes/GENOME_REPORTS/prokaryotes.txt"
 # grep for species in question and view.
 grep -i "Streptomyces" prokaryotes.txt | tabview -
+
+# Gather a list of the top 5, after you run this copy all the output and paste into the terminal!
+# Change 'head -n 5' to any number to print more than just five.
+grep "Pseudomonas aeruginosa" prokaryotes.txt | head -n 5 | awk -F'\t' '{print "wget "$21"/*protein.faa.gz"}'
 ```
 
 This file has a lot of useful information. For now we really care about column 21 which is the downloa link for the genome on the ftp site. Copy that link and paste it into a browser to see the files. We will then download the FAA files to the server.
