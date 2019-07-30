@@ -65,6 +65,8 @@ grep -i "Streptomyces" prokaryotes.txt | tabview -
 grep "Pseudomonas aeruginosa" prokaryotes.txt | head -n 5 | awk -F'\t' '{print "wget "$21"/*protein.faa.gz"}'
 # or even better
 grep "Pseudomonas aeruginosa" prokaryotes.txt | head -n 5 | awk -F'\t' '{print $21"/*protein.faa.gz"}' | xargs -P16 wget -i
+# or even better, rename the files as you go
+awk -F'\t' '$20 == "REFR"' prokaryotes.txt | grep -E "(Bacteroides|Parabacteroides)" | grep -v Firmicutes | sed 's/ /_/g' | awk -F'\t' '{print $1"_"$19,$21"/*protein.faa.gz"}' | xargs -n 2 -P 4 wget -O
 ```
 
 This file has a lot of useful information. For now we really care about column 21 which is the downloa link for the genome on the ftp site. Copy that link and paste it into a browser to see the files. We will then download the FAA files to the server.
